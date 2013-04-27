@@ -1,7 +1,7 @@
 public class Dang extends Critter
 {
-	public static String critters[20];
-	public static int indices[20];	
+	public static String critters = new String[25];
+	public static int indices = new int[25];	
 	
 	public Attack fight(String opponent)
 	{
