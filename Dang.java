@@ -1,7 +1,8 @@
 public class Dang extends Critter
 {
 	public static String critters = new String[25];
-	public static int indices = new int[25];	
+	public static int indices = new int[25];
+	public char lastAttack;
 	
 	public Attack fight(String opponent)
 	{
@@ -51,9 +52,12 @@ public class Dang extends Critter
 	 	int randomDecision = r.nexInt(3);
 	 	switch(randomDecision) 
 	 	{
-	 		case 1: return Attack.ROAR;
-	 		case 2: return Attack.POUNCE;
-	 		default: return Attack.SCRATCH;
+	 		case 1: lastAttack = 'r';
+	 			return Attack.ROAR;
+	 		case 2: lastAttack = 'p';
+	 			return Attack.POUNCE;
+	 		default:lastAttack = 's'; 
+	 			return Attack.SCRATCH;
 	 	}
 	 	
 	 	
@@ -78,7 +82,7 @@ public class Dang extends Critter
 		else
 		{
 			hungry = 0;
-			return true
+			return true;
 			
 		}
 		
@@ -91,7 +95,35 @@ public class Dang extends Critter
 	{
 		return "DY";
 	}
-
-
+	
+	public static char attack = new char[25];
+	public void lose() {
+		/*
+		idx = 0;
+		
+		String n = this.getNeighbor(NORTH);
+		String s = this.getNeighbor(SOUTH);
+		String e = this.getNeighbor(EAST);
+		String w = this.getNeighbor(WEST);
+		
+		if ((n != null) || (s != null) || (e != null) || (w != null))
+		{
+			for(String i : critters)
+			{
+				
+				if (i.equals(n))
+				{
+				    attack[idx] =	
+					
+				}
+					
+				idx++;	
+				
+			}
+			
+		}
+		
+		*/
+	}
 
 }
