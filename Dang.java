@@ -64,8 +64,33 @@ public class Dang extends Critter
 	
 	
 	}
-
-
+	
+	private int hungry = 0;
+	public boolean eat() 
+	{
+		//eeeeeeeeeeeeeeeet eet eet
+		if (hungry <= 4)
+		{
+			hungry++;
+			return false;
+			
+		}
+		else
+		{
+			hungry = 0;
+			return true
+			
+		}
+		
+	}
+	public Color getColor() 
+	{
+		return Color.BLUE;
+	}
+	public String toString() 
+	{
+		return "DY";
+	}
 
 
 
